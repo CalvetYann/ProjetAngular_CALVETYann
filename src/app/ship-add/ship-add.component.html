@@ -1,0 +1,106 @@
+<div class="alert alert-success" *ngIf="new">
+    <div class="col-12">
+        Ship was successfully added!
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Brand Name</label><br>
+        <input type="text" class="form-control" [(ngModel)]="ship.brandName">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Ship Name</label><br>
+        <input type="text" class="form-control" [(ngModel)]="ship.shipName">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Role</label><br>
+        <input type="text" class="form-control" [(ngModel)]="ship.shipRole">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Size</label><br>
+        <input type="text" class="form-control" [(ngModel)]="ship.shipSize">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-3">
+      <div class="form-group">
+        <label>Weight</label><br>
+        <input type="text" class="form-control" [(ngModel)]="ship.shipWeight">
+      </div>
+    </div>
+    <div class="col-12 col-sm-3">
+      <div class="form-group">
+        <label>Length</label><br>
+        <input type="text" class="form-control" [(ngModel)]="ship.shipLength">
+      </div>
+    </div>
+    <div class="col-12 col-sm-3">
+      <div class="form-group">
+        <label>Width</label> <br>
+        <input type="text" class="form-control" [(ngModel)]="ship.shipWidth">
+      </div>
+    </div>
+    <div class="col-12 col-sm-3">
+      <div class="form-group">
+        <label>Height</label><br>
+        <input type="text" class="form-control" [(ngModel)]="ship.shipHeight">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Picture Link</label> <br>
+        <input type="text" class="form-control" [(ngModel)]="ship.shipPicture">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group row">
+        <label class="col-12 col-form-label">
+          Flight Ready
+        </label>
+        <div class="col-12 row">
+          <div class="col-6">
+            <div class="form-check">
+              <input type="radio" name="playable" class="form-check-input" [value]="true" [(ngModel)]="ship.shipFlightReady"> <label class="form-check-label">Playable</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-check">
+              <input type="radio" name="playable" class="form-check-input" [value]="false" [(ngModel)]="ship.shipFlightReady"> <label class="form-check-label">Not Playable</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <label>Description</label><br>
+        <textarea name="description" cols="30" rows="10" class="form-control" [(ngModel)]="ship.shipDesc"></textarea>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="submit">
+        <button class="btn btn-outline-success" (click)="add()">Add</button>
+      </div>
+    </div>
+  </div>

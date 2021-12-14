@@ -1,0 +1,35 @@
+<div class="card w-100" style="margin-top: 10px;">
+    <h5 class="card-title card-header text-center">{{ brandName }}</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <img [src]="brandLogo" alt="Card image cap" style="width: 100%;">
+            </div>
+            <div class="col-12 col-sm-8">
+                <div class="row">
+                    <h5 class="card-title col-12">Brand code : {{ brandCode }}</h5>
+                </div>
+                <div class="row">
+                    <p class="card-text col-12">{{ brandDesc }}</p>
+                </div>
+                <div class="row">
+                    <ul class="list-group list-group-flush col-12">
+                        <li class="list-group-item">Industry : {{ brandIndus }}</li>
+                        <li class="list-group-item">Products : {{ brandProducts }}</li>
+                        <li class="list-group-item">Race : {{ brandRace }}</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="btn-group col-9" role="group"></div>
+                    <div class="btn-group col-3" role="group">
+                        <a [routerLink]="['./edit', id]" class="btn btn-warning">Edit Brand</a>
+                        <button class="btn btn-danger" (click)="delete()">Delete</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted text-center" *ngIf="brandFounded">
+        Brand founded in {{ brandFounded }}
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="card-group" style="margin-bottom: 10px;" *ngIf="brands">
+    <app-brand class="w-100" *ngFor="let brand of brands; let i = index"
+    [brandName]="brand.brandName"
+    [brandCode]="brand.brandCode"
+    [brandLogo]="brand.brandLogo"
+    [brandRace]="brand.brandRace"
+    [brandProducts]="brand.brandProducts"
+    [brandDesc]="brand.brandDesc"
+    [brandFounded]="brand.brandFounded"
+    [brandIndus]="brand.brandIndus"
+    [id]="brand.id"></app-brand>    
+</div>
+
+<div>
+    <a [routerLink]="['./add']" class="btn btn-outline-info">New Brand</a>
+</div>

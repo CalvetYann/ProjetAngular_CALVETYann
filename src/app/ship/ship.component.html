@@ -1,0 +1,27 @@
+<div class="card bg-dark text-white" style="margin-top: 10px;">
+    <img class="card-img-top" [src]="shipPicture" alt="Card image cap">
+    <div class="card-img-overlay">
+      <div class="btn-group" role="group">
+        <a [routerLink]="['./edit', id]" class="btn btn-warning">Edit Ship</a>
+        <button class="btn btn-danger" (click)="delete()">Delete</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ shipName }}</h5>
+
+      <p class="card-text">{{ shipDesc }}</p>
+      <ul class="list-group">
+          <li *ngIf="brandName" class="list-group-item bg-dark text-white">Brand : {{ brandName }}</li>
+          <li *ngIf="shipRole" class="list-group-item bg-dark text-white">Role : {{ shipRole }}</li>
+          <li *ngIf="shipSize" class="list-group-item bg-dark text-white">Size : {{ shipSize }}</li>
+          <li *ngIf="shipWeight" class="list-group-item bg-dark text-white">Weight : {{ shipWeight }} kg</li>
+          <li *ngIf="shipLength" class="list-group-item bg-dark text-white">Length : {{ shipLength }} m</li>
+          <li *ngIf="shipWidth" class="list-group-item bg-dark text-white">Width : {{ shipWidth }} m</li>
+          <li *ngIf="shipHeight" class="list-group-item bg-dark text-white">Height : {{ shipHeight }} m</li>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted" *ngIf="shipFlightReady == false">This ship is not playable yet</small>
+      <small class="text-muted" *ngIf="shipFlightReady == true">This ship is playable</small>
+    </div>
+  </div>
