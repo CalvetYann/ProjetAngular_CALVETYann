@@ -1,5 +1,5 @@
-<div class="card-group" style="margin-bottom: 10px;" *ngIf="ships">
-    <app-ship *ngFor="let ship of ships; let i = index"
+<div class="row card-deck mb-1" *ngIf="ships">
+    <app-ship class="col-6 sm-6 d-flex" *ngFor="let ship of ships; let i = index"
     [brandName]="ship.brandName"
     [shipName]="ship.shipName"
     [shipRole]="ship.shipRole"
